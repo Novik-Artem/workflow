@@ -15,7 +15,7 @@
 
 <style lang="scss" module>
 .header {
-  background-color: #140e1b;
+  background-color: $bg;
   height: 6rem;
   display: flex;
   align-items: center;
@@ -28,11 +28,11 @@
     .title {
       font-weight: 700;
       font-size: 1.125rem;
-      color: white;
+      color: $white;
       span {
         font-weight: 300;
         font-size: 0.875rem;
-        color: #d4e2f6;
+        color: $light-blue;
       }
     }
   }
@@ -40,7 +40,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #969696;
+    color: $t-secondary;
     text-transform: uppercase;
     .locale {
       padding: 0.75rem;
@@ -49,7 +49,7 @@
       &.active {
         cursor: default;
         background: #ffffff14;
-        color: white;
+        color: $white;
       }
     }
   }
