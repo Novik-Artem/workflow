@@ -25,7 +25,7 @@
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    @media (max-width: 900px) {
+    @include custom(900) {
       grid-template-columns: 1fr;
     }
     .left {
@@ -36,7 +36,7 @@
         color: $white;
         margin: 0 0 1.5rem 0;
         max-width: 37rem;
-        @media (max-width: 1200px) {
+        @include custom(1200) {
           font-size: 2rem;
           max-width: none;
         }
@@ -47,7 +47,7 @@
         color: $light-blue;
         max-width: 37rem;
         margin: 0 0 3rem 0;
-        @media (max-width: 1200px) {
+        @include custom(1200) {
           font-size: 1rem;
         }
         span {
@@ -64,18 +64,22 @@
 
         background: linear-gradient(180deg, $main-blue 0%, $purple 100%);
         border: 1px solid;
-        border-image-source: linear-gradient(135deg, $purple 0%, $main-blue 100%);
+        border-image-source: linear-gradient(
+          135deg,
+          $purple 0%,
+          $main-blue 100%
+        );
         box-shadow: 2px 4px 24px 0px #7d6ceb;
       }
     }
     .right {
       max-width: 100%;
       max-height: 100%;
-      @media (max-width: 1200px) {
+      @include custom(1200) {
         max-width: 30rem;
         max-height: 30rem;
       }
-      @media (max-width: 900px) {
+      @include custom(900) {
         display: none;
       }
       img {
