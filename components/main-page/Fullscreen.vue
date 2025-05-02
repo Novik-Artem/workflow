@@ -2,13 +2,12 @@
   <div :class="$style.container">
     <div :class="$style.main">
       <div :class="$style.left">
-        <div :class="$style.title">Готовое решение для вашего бизнесса</div>
+        <div :class="$style.title">{{ $t("mainPage.fullscreen.title") }}</div>
         <div :class="$style.text">
-          Workflow — это умный инструмент для автоматического соединения
-          сервисов, который избавит вас от рутины.
-          <span>Автоматизируйте рутину — сосредоточьтесь на главном</span>
+          {{ $t("mainPage.fullscreen.text") }}
+          <span>{{ $t("mainPage.fullscreen.subtext") }}</span>
         </div>
-        <div :class="$style.button">Подключить</div>
+        <div :class="$style.button">{{ $t("mainPage.fullscreen.button") }}</div>
       </div>
       <div :class="$style.right">
         <img src="/images/main-page/ai.png" alt="" />

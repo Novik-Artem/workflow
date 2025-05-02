@@ -7,8 +7,18 @@
       <div :class="$style.title">WORKFLOW <span>tech</span></div>
     </div>
     <div :class="$style.lang">
-      <div :class="$style.locale">ru</div>
-      <div :class="$style.locale">en</div>
+      <div
+        @click="$i18n.locale = 'ru'"
+        :class="[$style.locale, { [$style.active]: $i18n.locale === 'ru' }]"
+      >
+        ru
+      </div>
+      <div
+        @click="$i18n.locale = 'en'"
+        :class="[$style.locale, { [$style.active]: $i18n.locale === 'en' }]"
+      >
+        en
+      </div>
     </div>
   </header>
 </template>
